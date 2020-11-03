@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="../estilo/estiloDeci.css" media="screen" />
+        <script type="text/javascript" src="../java/casa.js"></script>
+        <script type="text/javascript" src="../java/calculodeaderenciadeci.js"></script>
+    </head>
+    <body> 
+        <div class="middle">
+            <table> 
+                <td><a href="index.html"  class="btn btn1">Voltar</a></td>
+            </table>
+
+            <button class='salvar'onclick="porcentagemAderencia()">Salvar</button>
+
+        <h3 class="letras">GDE - O propósito do processo Gerência de Decisões é analisar possíveis decisões críticas usando um processo formal, com critérios estabelecidos, para avaliação das alternativas identificadas. </h4>
+        <br>
+        <h3 class="letras">A Matriz de Decisão é uma ferramenta de apoio a decisão e que permite uma análise que considera todos os aspectos relevantes. 
+        Ela também auxilia na identificação de pontos fortes e fracos de cada ideia, tornado mais simples a escolha para um próximo projeto.</h3> 
+        <div class="Vida">
+         <h3 class=frase>Para calcular a porcentagem de aderência, clique aqui: </h3>
+        <table class="Tabela">
+            <thead>
+                <tr>
+                    <td>Numero</td>    
+                    <td>Ideia</td>
+                    <td>Impacto</td>
+                    <td>Esforço</td>
+                    <td>Lucratividede</td>
+                    <td>Visão</td>
+                    <td>Total</td>
+                    <td>Check</td>
+                    <td>Cálculo de Aderência(%)</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="linha_tabela">
+                    <td >1</td>   
+                    <td style="width:10px" >  <textarea id="story" name="story" cols="50"></textarea> </td>
+                    <td><input type='number' id="num0"  onblur="calcular();"min="1" max="5" placeholder='' /></td>
+                    <td><input type='number' id="num1"  onblur="calcular();"min="1" max="5" placeholder='' /></td>
+                    <td> <input type='number' id="num2" onblur="calcular();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num3" onblur="calcular();" min="1"max="5" placeholder='' /> </td>
+                    <td><input id="result" type="text"/></td>
+                    <td>
+                        <form>
+                        <input type="radio" id="sim0" name="gender0" value="sim">
+                        <label for="sim0">Sim</label><br>
+                        <input type="radio" id="não0" name="gender0" value="nao">
+                        <label for="não0">Não</label><br>
+                        <input type="radio" id="nãoaplica0" name="gender0" value="naoapli">
+                        <label for="nãoaplica0">Não aplicável </label>
+                        </form>
+                    </td>
+                    <td><input id="calculoTotal" type="text"/></td>
+                </tr>
+
+                <tr class="linha_tabela">
+                    <td>2</td>   
+                    <td style="width:10px" >  <textarea id="story" name="story" cols="50"></textarea> </td>
+                    <td><input type='number' id="num4"  onblur="calcular1();"min="1" max="5" placeholder='' /></td>
+                    <td><input type='number' id="num5"  onblur="calcular1();" min="1"max="5" placeholder='' /></td>
+                    <td> <input type='number' id="num6" onblur="calcular1();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num7" onblur="calcular1();" min="1"max="5" placeholder='' /> </td>
+                    <td><input id="result1" type="text"/></td>
+                    <td>
+                        <form>
+                            <input type="radio" id="sim1" name="gender1" value="sim">
+                            <label for="sim1">Sim</label><br>
+                            <input type="radio" id="não1" name="gender1" value="nao">
+                            <label for="não1">Não</label><br>
+                            <input type="radio" id="nãoaplica1" name="gender1" value="naoapli">
+                            <label for="nãoaplica1">Não aplicável </label>
+                        </form>
+                    </td>
+                    
+                </tr>
+
+                <tr class="linha_tabela">
+                    <td>3</td>   
+                    <td style="width:10px" > <textarea id="story" name="story" cols="50"></textarea> </td>
+                    <td><input type='number' id="num8"  onblur="calcular2();"min="1" max="5" placeholder='' /></td>
+                    <td> <input type='number' id="num9" onblur="calcular2();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num10" onblur="calcular2();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num10.1"  onblur="calcular2();"min="1" max="5" placeholder='' /></td>
+                    <td><input id="result2" type="text"/></td>
+                    <td>
+                        <form>
+                        <input type="radio" id="sim2" name="gender2" value="sim">
+                        <label for="sim2">Sim</label><br>
+                        <input type="radio" id="não2" name="gender2" value="nao">
+                        <label for="não2">Não</label><br>
+                        <input type="radio" id="nãoaplica2" name="gender2" value="naoapli">
+                        <label for="nãoaplica2">Não aplicável </label>
+                        </form>
+                    </td>
+                    
+                </tr>
+
+                <tr class="linha_tabela">
+                    <td>4</td>   
+                    <td style="width:10px" > <textarea id="story" name="story" cols="50"></textarea> </td>
+                    <td><input type='number' id="num11"  onblur="calcular3();"min="1" max="5" placeholder='' /></td>
+                    <td> <input type='number' id="num12" onblur="calcular3();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num13" onblur="calcular3();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num14"  onblur="calcular3();"min="1" max="5" placeholder='' /></td>
+                    <td><input id="result3" type="text"/></td>
+                    <td>
+                        <form>
+                        <input type="radio" id="sim3" name="gender3" value="sim">
+                        <label for="sim3">Sim</label><br>
+                        <input type="radio" id="não3" name="gender3" value="nao">
+                        <label for="não3">Não</label><br>
+                        <input type="radio" id="nãoaplica3" name="gender3" value="naoapli">
+                        <label for="nãoaplica3">Não aplicável </label>
+                        </form>
+                    </td>
+                    
+                </tr>
+
+                <tr class="linha_tabela">
+                    <td>5</td>   
+                    <td style="width:10px" > <textarea id="story" name="story" cols="50"></textarea> </td>
+                    
+                    <td><input type='number' id="num15"  onblur="calcular4();"min="1" max="5" placeholder='' /></td>
+                    <td> <input type='number' id="num16" onblur="calcular4();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num17" onblur="calcular4();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num18"  onblur="calcular4();"min="1" max="5" placeholder='' /></td>
+                    <td><input id="result4" type="text"/></td>
+                    <td>
+                        <form>
+                            <input type="radio" id="sim4" name="gender4" value="sim">
+                            <label for="sim4">Sim</label><br>
+                            <input type="radio" id="não4" name="gender4" value="nao">
+                            <label for="não4">Não</label><br>
+                            <input type="radio" id="nãoaplica4" name="gender4" value="naoapli">
+                            <label for="nãoaplica4">Não aplicável </label>
+                        </form>
+                    </td>
+                    
+                </tr>
+
+                <tr class="linha_tabela">
+                    <td>6</td>   
+                    <td style="width:10px" > <textarea id="story" name="story" cols="50"></textarea> </td>
+                    <td><input type='number' id="num19"  onblur="calcular5();"min="1" max="5" placeholder='' /></td>
+                    <td><input type='number' id="num20"  onblur="calcular5();"min="1" max="5" placeholder='' /></td>
+                    <td> <input type='number' id="num21" onblur="calcular5();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num22" onblur="calcular5();" min="1"max="5" placeholder='' /> </td>
+                    <td><input id="result5" type="text"/></td>
+                    <td>
+                        <form>
+                        <input type="radio" id="sim5" name="gender5" value="sim">
+                        <label for="sim5">Sim</label><br>
+                        <input type="radio" id="não5" name="gender5" value="nao">
+                        <label for="não5">Não</label><br>
+                        <input type="radio" id="nãoaplica5" name="gender5" value="naoapli">
+                        <label for="nãoaplica5">Não aplicável </label>
+                        </form>
+                    </td>
+                    
+                </tr>
+
+                <tr class="linha_tabela">
+                    <td>7</td>   
+                    <td style="width:10px" > <textarea id="story" name="story" cols="50"></textarea> </td>
+                    <td><input type='number' id="num23"  onblur="calcular6();"min="1" max="5" placeholder='' /></td>
+                    <td><input type='number' id="num24"  onblur="calcular6();"min="1" max="5" placeholder='' /></td>
+                    <td> <input type='number' id="num25" onblur="calcular6();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num26" onblur="calcular6();" min="1"max="5" placeholder='' /> </td>
+                    <td><input id="result6" type="text"/></td>
+                    <td>
+                        <form>
+                        <input type="radio" id="sim06" name="gender6" value="sim">
+                        <label for="sim06">Sim</label><br>
+                        <input type="radio" id="não06" name="gender6" value="nao">
+                        <label for="não06">Não</label><br>
+                        <input type="radio" id="nãoaplica06" name="gender6" value="naoapli">
+                        <label for="nãoaplica06">Não aplicável </label>
+                        </form>
+                    </td>
+                    
+                </tr>
+
+                <tr class="linha_tabela">
+                    <td>8</td>   
+                    <td style="width:10px" > <textarea id="story" name="story" cols="50"></textarea> </td>
+                    <td><input type='number' id="num27"  onblur="calcular7();"min="1" max="5" placeholder='' /></td>
+                    <td><input type='number' id="num28"  onblur="calcular7();"min="1" max="5" placeholder='' /></td>
+                    <td> <input type='number' id="num29" onblur="calcular7();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num30" onblur="calcular7();" min="1"max="5" placeholder='' /> </td>
+                    <td><input id="result7" type="text"/></td>
+                    <td>
+                        <form>
+                        <input type="radio" id="sim7" name="gender7" value="sim">
+                        <label for="sim7">Sim</label><br>
+                        <input type="radio" id="não7" name="gender7" value="nao">
+                        <label for="não7">Não</label><br>
+                        <input type="radio" id="nãoaplica7" name="gender7" value="naoapli">
+                        <label for="nãoaplica7">Não aplicável </label>
+                        </form>
+                    </td>
+                    
+                </tr>
+
+                <tr class="linha_tabela">
+                    <td>9</td>   
+                    <td style="width:10px" > <textarea id="story" name="story" cols="50"></textarea> </td>
+                    <td><input type='number' id="num31"  onblur="calcular8();"min="1" max="5" placeholder='' /></td>
+                    <td><input type='number' id="num32"  onblur="calcular8();"min="1" max="5" placeholder='' /></td>
+                    <td> <input type='number' id="num33" onblur="calcular8();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num34" onblur="calcular8();" min="1"max="5" placeholder='' /> </td>
+                    <td><input id="result8" type="text"/></td>
+                    <td>
+                        <form>
+                        <input type="radio" id="sim8" name="gender8" value="sim">
+                        <label for="sim8">Sim</label><br>
+                        <input type="radio" id="não8" name="gender8" value="nao">
+                        <label for="não8">Não</label><br>
+                        <input type="radio" id="nãoaplica8" name="gender8" value="naoapli">
+                        <label for="nãoaplica8">Não aplicável </label>
+                        </form>
+                    </td>
+                    
+                </tr>
+
+                <tr class="linha_tabela">
+                    <td>10</td>   
+                    <td style="width:10px" > <textarea id="story" name="story" cols="50"></textarea> </td>
+                    <td><input type='number' id="num36" onblur="calcular9();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num37"  onblur="calcular9();"min="1" max="5" placeholder='' /></td>
+                    <td> <input type='number' id="num38" onblur="calcular9();" min="1"max="5" placeholder='' /> </td>
+                    <td><input type='number' id="num39" onblur="calcular9();" min="1"max="5" placeholder='' /> </td>
+                    <td><input id="result9" type="text"/></td>
+                    <td>
+                        <form>
+                        <input type="radio" id="sim9" name="gender9" value="sim">
+                        <label for="sim9">Sim</label><br>
+                        <input type="radio" id="não9" name="gender9" value="nao">
+                        <label for="não9">Não</label><br>
+                        <input type="radio" id="nãoaplica9" name="gender9" value="naoapli">
+                        <label for="nãoaplica9">Não aplicável </label>
+                        </form>
+                    </td>
+                    
+                </tr>
+
+
+                </tbody>
+                <img src="../imagens/1.PNG" class='imagens'>
+                
+            </table>
+        </div>
+    </body>
+</html>
